@@ -69,7 +69,7 @@ public class Interpreter {
         } else if (expression instanceof VariableDeclarationNode) {
             VariableDeclarationNode varDecl = (VariableDeclarationNode) expression;
             return localVariables.get(varDecl.name);
-        } else if (expression instanceof VariableReferenceNode) { // New case for variable references
+        } else if (expression instanceof VariableReferenceNode) {
             String varName = ((VariableReferenceNode) expression).name;
             if (!localVariables.containsKey(varName)) {
                 throw new RuntimeException("Undefined variable: " + varName);
