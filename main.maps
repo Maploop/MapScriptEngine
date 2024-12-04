@@ -1,0 +1,17 @@
+fn addFunction(a: int, b: int) => int {
+  return a + b
+}
+
+fn addOrSome() => int {
+    var added: int = addFunction(10, 20)
+    sys.println(added)
+    return added
+}
+
+fn main() => int {
+  var finalAdded: int = addOrSome()
+  sys.println("final added is " + finalAdded)
+  var division: int = finalAdded / 2
+  sys.println("devided is " + division)
+  return 0
+}
